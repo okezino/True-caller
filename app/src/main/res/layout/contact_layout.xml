@@ -2,17 +2,16 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="85dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="5dp"
-    app:cardElevation="0dp"
+    app:cardElevation="1dp"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constrain"
-        android:layout_width="407dp"
-        android:layout_height="85dp"
-        android:padding="5dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -20,46 +19,49 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"
-            android:src="@drawable/p9"
+            android:src="@drawable/ic_baseline_person_24"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <TextView
             android:id="@+id/textViewId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="72dp"
-            android:layout_marginTop="16dp"
-            android:textStyle="normal"
-            android:textSize="20sp"
+            android:layout_marginStart="5dp"
             android:text="TEXTVIEW"
             android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
         </TextView>
 
-        <ImageButton
+        <TextView
             android:id="@+id/edit_image"
-            android:layout_width="30dp"
+            android:layout_width="wrap_content"
             android:layout_height="32dp"
-            android:layout_marginTop="8dp"
+            android:text="Edit"
+            android:textColor="@color/purple_500"
             android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toStartOf="@+id/delete_image"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_edit_24" />
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-        <ImageButton
+        <TextView
             android:id="@+id/delete_image"
-            android:layout_width="30dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="36dp"
+            android:text="Delete"
+            android:textColor="@color/red"
             android:contentDescription="TODO"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
+            app:layout_constraintBottom_toBottomOf="parent"
+             />
 
         <ImageView
 

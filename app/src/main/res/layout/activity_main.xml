@@ -12,7 +12,7 @@
       android:id="@+id/Tab"
       android:layout_width="match_parent"
       android:layout_height="?actionBarSize"
-      android:background="@color/cardview_dark_background"
+      android:background="#FF018786"
       app:tabMode="fixed"
       app:tabGravity="fill"
       app:tabTextColor="@color/white"

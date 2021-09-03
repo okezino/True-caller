@@ -32,11 +32,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 }
 
-class  Mainsomething  {
-
-    var seveny = MainActivity().Seven
-
-}
 /**
  * Declaration of the FragmentLayout PagerAdapter Class
  */
