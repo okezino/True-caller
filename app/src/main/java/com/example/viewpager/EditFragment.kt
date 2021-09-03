@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import com.google.firebase.database.FirebaseDatabase
@@ -35,12 +36,14 @@ class EditFragment(val afterUpdateCallBack: AfterUpdateCallBack, val activity: A
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        name_update.hint = profile.fullname
-        phone_update.hint = profile.phone
+        name_update.setText(profile.fullname)
+        phone_update.setText(profile.phone)
 
         btn_update.setOnClickListener {
-            //validation
-            updateUserContact(name_update.text.toString(),phone_update.text.toString())
+            if(name_update.text.toString().isNotEmpty() && phone_update.text.toString().isNotEmpty() ){
+                updateUserContact(name_update.text.toString(),phone_update.text.toString())
+            } else Toast.makeText(requireActivity(), "Fill in the missing fields", Toast.LENGTH_SHORT).show()
+
         }
     }
 
